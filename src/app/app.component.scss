@@ -1,0 +1,25 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+.header {
+    height: 50px;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      li {
+        list-style-type: none;
+        margin: 0 10px;
+        padding: 5px;
+        border-radius: 6px;
+      }
+      :hover {
+        background-color: aquamarine;
+        font-weight: bold;
+      }
+    }
+  }
