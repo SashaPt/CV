@@ -1,0 +1,7 @@
+<div class="img-container">
+  <div>
+    <input type="number" min="1" [(ngModel)]="countDogs"/>
+    <button (click)="getRandomDogs()">GET RANDOM DOGS</button>
+  </div>
+  <img [src]="dogImg" alt="dog" *ngFor="let dogImg of dogsImages" />
+</div>

@@ -7,8 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { MainPageComponent } from './pages/main-page/main-page.component';
-import { PortfolioPageComponent } from './pages/portfolio-page/portfolio-page.component';
 import { ContactsPageComponent } from './pages/contacts-page/contacts-page.component';
+import { DogsPageComponent } from './pages/dogs-page/dogs-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RandomDogComponent } from './pages/dogs-page/random-dog/random-dog.component';
+import { RandomDogsComponent } from './pages/dogs-page/random-dogs/random-dogs.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { ContactsPageComponent } from './pages/contacts-page/contacts-page.compo
     FooterComponent,
     MainLayoutComponent,
     MainPageComponent,
-    PortfolioPageComponent,
-    ContactsPageComponent
+    ContactsPageComponent,
+    DogsPageComponent,
+    RandomDogComponent,
+    RandomDogsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

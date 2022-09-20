@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,20 +6,25 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() isMainPageVisible!: boolean;
+  @Input() isDogsPageVisible!: boolean;
+  @Input() isContactsPageVisible!: boolean;
+
   @Output() clickMainPage = new EventEmitter();
-   onShowMainPage(): void {
-    this.clickMainPage.emit();
-  }
-  @Output() clickPortfolioPage = new EventEmitter();
-  onShowPortfolioPage(): void {
-    this.clickPortfolioPage.emit();
-  }
+  @Output() clickDogsPage = new EventEmitter();
   @Output() clickContactsPage = new EventEmitter();
-  onShowContactsPage(): void {
-    this.clickContactsPage.emit();
-  }
+
   constructor() {}
 
   ngOnInit(): void {}
- 
+  
+  showMainPage() {
+    this.clickMainPage.emit();
+  }
+  showDogsPage() {
+    this.clickDogsPage.emit();
+  }
+  showContactsPage() {
+    this.clickContactsPage.emit();
+  }
 }

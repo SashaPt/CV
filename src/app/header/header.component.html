@@ -1,7 +1,11 @@
 <div class="header">
-    <ul>
-        <li (click)="onShowMainPage">Главная</li>
-        <li (click)="onShowPortfolioPage">Портфолио</li>
-        <li (click)="onShowContactsPage">Контакты</li>
-    </ul>
+  <ul>
+    <li [class.active]="isMainPageVisible" (click)="showMainPage()">Главная</li>
+    <li [class.active]="isDogsPageVisible" (click)="showDogsPage()">
+      Dogs
+    </li>
+    <li [class.active]="isContactsPageVisible" (click)="showContactsPage()">
+      Контакты
+    </li>
+  </ul>
 </div>

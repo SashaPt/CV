@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PortfolioPageComponent } from './portfolio-page.component';
+import { RandomDogComponent } from './random-dog.component';
 
-describe('PortfolioPageComponent', () => {
-  let component: PortfolioPageComponent;
-  let fixture: ComponentFixture<PortfolioPageComponent>;
+describe('RandomDogComponent', () => {
+  let component: RandomDogComponent;
+  let fixture: ComponentFixture<RandomDogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PortfolioPageComponent ]
+      declarations: [ RandomDogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PortfolioPageComponent);
+    fixture = TestBed.createComponent(RandomDogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

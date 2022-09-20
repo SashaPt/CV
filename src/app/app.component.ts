@@ -7,21 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isMainPageVisible: boolean = true;
-  isPortfolioPageVisible: boolean = false;
+  isDogsPageVisible: boolean = false;
   isContactsPageVisible: boolean = false;
   showMainPage() {
     this.isMainPageVisible = true;
-    this.isPortfolioPageVisible = false;
+    this.isDogsPageVisible = false;
     this.isContactsPageVisible = false;
   }
-  showPortfolioPage() {
+  showDogsPage() {
     this.isMainPageVisible = false;
-    this.isPortfolioPageVisible = true;
+    this.isDogsPageVisible = true;
     this.isContactsPageVisible = false;
   }
   showContactsPage() {
     this.isMainPageVisible = false;
-    this.isPortfolioPageVisible = false;
+    this.isDogsPageVisible = false;
     this.isContactsPageVisible = true;
   }
 }

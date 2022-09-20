@@ -1,19 +1,17 @@
 <div class="container">
-  <!-- <app-header (cickMainPage)="showMainPage()"
-    (cickPortfolioPage)="showPortfolioPage()"
-    (cickContactPage)="showContactsPage()"
-    ></app-header> -->
-  <div class="header">
-    <ul>
-        <li (click)="showMainPage()">Главная</li>
-        <li (click)="showPortfolioPage()">Портфолио</li>
-        <li (click)="showContactsPage()">Контакты</li>
-    </ul>
-</div>
+  <app-header
+    [isMainPageVisible]="isMainPageVisible"
+    [isContactsPageVisible]="isContactsPageVisible"
+    [isDogsPageVisible]="isDogsPageVisible"
+    (clickMainPage)="showMainPage()"
+    (clickDogsPage)="showDogsPage()"
+    (clickContactsPage)="showContactsPage()"
+  ></app-header>
+
   <app-main-layout
     [isMainPageVisible]="isMainPageVisible"
     [isContactsPageVisible]="isContactsPageVisible"
-    [isPortfolioPageVisible]="isPortfolioPageVisible"
+    [isDogsPageVisible]="isDogsPageVisible"
   ></app-main-layout>
   <app-footer></app-footer>
 </div>

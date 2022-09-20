@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MainLayoutComponent implements OnInit {
 @Input() isMainPageVisible!: boolean;
-@Input() isPortfolioPageVisible!: boolean;
+@Input() isDogsPageVisible!: boolean;
 @Input() isContactsPageVisible!: boolean;
   constructor() { }
 
